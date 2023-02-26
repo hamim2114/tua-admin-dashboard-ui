@@ -1,0 +1,51 @@
+@use '../../scss//abstracts/' as *;
+
+.summary-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &_chart{
+        width: 30%;
+        @include tablet {
+            width: 20%;
+                    
+        }
+        &_value{
+            font-weight: 700;
+        }
+    }
+    &_info{
+        width: 60%;
+        @include flex(flex-start, space-between);
+        flex-direction: column;
+        &_title{
+            font-size: $fontSizeMedium;
+            font-weight: 700;
+            line-height: 1.2;
+            span{
+                font-size: 12px;
+                font-weight: 400;
+            }
+        }
+        &_value{
+            font-weight: 700;
+            
+            color: $black;
+        }
+    }
+
+}
+
+.summery-box-special{
+    @include flex(center, space-between);
+    flex-direction: column;
+    height: 100%;
+    &_title{
+        font-weight: 700;
+        font-size: $fontSizeMedium;
+    }
+    &_value{
+        font-weight: 700;
+        font-size: $fontSizeMedium;
+    }
+}
